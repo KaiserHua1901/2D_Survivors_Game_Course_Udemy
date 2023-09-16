@@ -1,13 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnrkhl2s1g4cx"]
+[gd_scene load_steps=5 format=3 uid="uid://dnrkhl2s1g4cx"]
 
 [ext_resource type="TileSet" uid="uid://cdf7bfmymoxrf" path="res://Resources/Tileset.tres" id="1_gy8gx"]
 [ext_resource type="PackedScene" uid="uid://dk4scr10yhbue" path="res://Resources/Camera.tscn" id="1_ovr2a"]
-[ext_resource type="PackedScene" uid="uid://rwmbabw7d0iv" path="res://Scenes/player.tscn" id="2_o8mdv"]
+[ext_resource type="PackedScene" uid="uid://rwmbabw7d0iv" path="res://Scenes/Player.tscn" id="2_o8mdv"]
+[ext_resource type="PackedScene" uid="uid://cxh05a0diwg6u" path="res://Scenes/Rat.tscn" id="4_1i7s6"]
 
 [node name="World" type="Node2D"]
-
-[node name="Camera2D" parent="." instance=ExtResource("1_ovr2a")]
-position = Vector2(320, 184)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_gy8gx")
@@ -16,3 +14,10 @@ layer_0/tile_data = PackedInt32Array(524304, 0, 4, 524305, 65536, 4, 524306, 655
 
 [node name="Player" parent="." instance=ExtResource("2_o8mdv")]
 position = Vector2(320, 184)
+
+[node name="Camera2D" parent="." instance=ExtResource("1_ovr2a")]
+position = Vector2(319, 184)
+zoom = Vector2(1.245, 1.245)
+
+[node name="Rat" parent="." instance=ExtResource("4_1i7s6")]
+position = Vector2(112, 88)

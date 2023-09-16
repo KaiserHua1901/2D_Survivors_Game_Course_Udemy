@@ -11,6 +11,7 @@ func _ready():
 func _process(delta):
 	acquire_target()
 	global_position = global_position.lerp(target_position, 1.0 - exp(-delta * 10))
+	# This math is for smoother the camera transition from the player
 	
 	
 func acquire_target(): 
